@@ -107,8 +107,6 @@ Converts a two-dimensional array (double\[]\[]) where each inner array represent
 
 This example shows a quick and easy method to use the .ToXyz (Point) method to convert a Dynamo Point.ByCoordinates to a Revit XYZ.
 
-![Converting a Dynamo Point.ByCoordinates into a Revit XYZ](Images/dynamo-point-to-revit-xyz.png)
-
 ```
 # Load the Python Standard and DesignScript Libraries
 import sys
@@ -188,8 +186,6 @@ Converts a list of Revit XYZ points into a list of Dynamo Points.
 
 This example shows a quick and easy method to use the .ToPoint (XYZ) method to convert a Revit XYZ into a Dynamo Point.
 
-![Converting a Revit XYZ into a Dynamo Point.ByCoordinates](Images/revit-xyz-to-dynamo-point.png)
-
 ```
 import sys
 import clr
@@ -231,8 +227,6 @@ Converts radians to degrees.
 
 This example shows a quick and easy method to use the .ToRadians method to convert from degrees to radians.
 
-![Degrees to Radians](Images/degrees-to-radians.png)
-
 ```
 import sys
 import clr
@@ -273,8 +267,6 @@ This method returns a perpendicular Dynamo `Vector` to the given Dynamo `Vector`
 #### Example Usage of X & UZ
 
 This example shows a quick and easy method to use the .GetPerpendicular method to get the perpendicular vector to an input vector.
-
-![Get Perpendicular Vector](Images/get-perpendicular-vector.png)
 
 ```
 import clr

@@ -2,8 +2,6 @@
 
 Text-based scripting within the visual-scripting environment enables powerful and visual relationships using DesignScript, Python, and ZeroTouch (C#). The user can expose elements such as input sliders, condense large operations into DesignScript, and access powerful tools and libraries through Python or C# all within the same workspace. If managed effectively, combining these strategies can lend a great deal of customization, clarity, and efficiency to the overall program. The following are a set of guidelines to help you augment your visual-script with text-script.
 
-![](../.gitbook/assets/cad-chart-textual.jpg)
-
 ### Know When to Script
 
 Text-scripting can establish relationships of a higher complexity than visual programming, yet their capabilities also overlap significantly. This makes sense because nodes are effectively pre-packaged code, and we could probably write an entire Dynamo program in DesignScript or Python. However, we use visual-scripting because the interface of nodes and wires creates an intuitive flow of graphic information. Knowing where text-scripting's capabilities go beyond visual-scripting will give you major clues to when it should be used without foregoing the intuitive nature of nodes and wires. The following are guidelines on when to script and which language to use.
@@ -39,8 +37,6 @@ When scripting in Dynamo, an inevitably parametric environment, it is wise to st
   * The intended output
   * Constants
 
-![](<../.gitbook/assets/think parametrically 01.jpg>)
-
 > Several variables have been established prior to writing code.
 >
 > 1. The surface we will simulate rainfall on.
@@ -56,8 +52,6 @@ When scripting in Dynamo, an inevitably parametric environment, it is wise to st
 * Whenever entities in your script are logically related, aim to define them as functions of each other. This way when one is modified, the other can update proportionally.
 * Minimize number of inputs by only exposing key parameters:
   * If a set of parameters can be derived from more parent parameters, only expose the parent parameters as script inputs. This increases the usability of your script by reducing the complexity of its interface.
-
-![](<../.gitbook/assets/think parametrically 02.jpg>)
 
 > The code "modules" from the example in [Python Node](../8_coding_in_dynamo/8-3_python/1-python.md).
 >
@@ -108,8 +102,6 @@ As your code gets longer and more complex the “big idea”, or overarching alg
 * This can be anything that should be visually separated from adjacent code (a function, a class, a group of inputs, or the libraries you are importing).
 * Developing code in modules harnesses the visual, intuitive quality of Nodes as well as the complex relationships that only text-scripting can achieve.
 
-![](<../.gitbook/assets/think parametrically 02.jpg>)
-
 > These loops call a class named "agent" that we will develop in the exercise.
 >
 > 1. A code module that defines the start point of each agent.
@@ -122,8 +114,6 @@ As your code gets longer and more complex the “big idea”, or overarching alg
 * "Manager" functions control program flow and primarily contain calls to "Worker" functions that handle low-level details, like moving data between structures.
 
 This example creates spheres with radii and color based on the Z value of the center points.
-
-![](<../.gitbook/assets/spot code resuse.jpg>)
 
 > 1. Two "worker" parent functions: one that creates spheres with radii and display colors based the centerpoint's Z value.
 > 2. A "manager" parent function that combines the two worker functions. Calling this will call both functions inside it.
@@ -188,8 +178,6 @@ While developing text-scripts in Dynamo, it is wise to constantly make sure that
   * Quickly test to make sure it is returning data that “makes sense”.
 * Assign the most recent data you are working with in your script as the output so that the node is always outputting relevant data when the script updates:
 
-![](<../.gitbook/assets/flex continuously.jpg>)
-
 > 1. Check that all edges of the solid are being returned as curves to create a bounding box around.
 > 2. Check that our Count inputs are successfully being converted to Ranges.
 > 3. Check that coordinate systems have been properly translated and rotated in this loop.
@@ -240,8 +228,6 @@ for i in range(xCount):
 * When a program must be modified, code that has been developed in modules will be much easier to change:
   * You can insert new or debugged modules into an existing program with the confidence that the rest of the program will not change.
 
-![](<../.gitbook/assets/leverage code's modularity.jpg>)
-
 > Debugging the example file from [Python Node](../8_coding_in_dynamo/8-3_python/1-python.md).
 >
 > 1. The input geometry is returning a bounding box larger that itself, as we can see from assigning xDist and yDist to OUT.
@@ -258,19 +244,13 @@ With our best practices for text-scripting in mind, let's write a rain simulatio
 
 Our script applied to an attractor-deformed surface.
 
-![](<../.gitbook/assets/scripting strategies - exercise - 01.jpg>)
-
 The first thing we need to do is import the necessary Dynamo libraries. Doing this first will give global access to Dynamo functionality in Python.
 
 All the libraries we intend on using need to be imported here.
 
-![](<../.gitbook/assets/scripting strategies - exercise - 02.jpg>)
-
 Next we need to define the script's inputs and output, which will display as input ports on the node. These external inputs are the foundation for our script and the key to establishing a parametric environment.
 
 We need to define inputs that correspond to variables in the Python script and determine a desired output:
-
-![](<../.gitbook/assets/scripting strategies - exercise - 03.jpg>)
 
 > 1. The surface we want to walk down.
 > 2. The number of agents we want to walk.
@@ -283,8 +263,6 @@ Now let's employ the practice of modularity and create the body of our script. S
 
 We will need to define a class, or blueprint, for an agent with the intention of walking down a surface by choosing to travel in the steepest possible direction each time it takes a step:
 
-![](<../.gitbook/assets/scripting strategies - exercise - 04.jpg>)
-
 > 1. Name.
 > 2. Global attributes that all the agents share.
 > 3. Instance attributes that are unique to each agent.
@@ -295,23 +273,15 @@ Let's initialize the agents by defining their start location. This is a good opp
 
 We will need to instantiate all the agents we want to observe walk down the surface and define their initial attributes:
 
-![](<../.gitbook/assets/scripting strategies - exercise - 05.jpg>)
-
 > 1. A new empty trail list.
 > 2. Where they will start their journey on the surface.
 > 3. We've assigned the agents list as the output to check what the script is returning here. The correct number of agents is being returned, but we'll need to flex the script again later on to verify the geometry it returns.
 
 Update each agent at each step. We will then need to enter a nested loop where for each agent and for each step, we update and record their position into their trail list. At each step we will also make sure the agent hasn’t reached a point on the surface where it cannot take another step which will allow it to descend. If that condition is met, we will end that agent's trip.
 
-![](<../.gitbook/assets/scripting strategies - exercise - 06.jpg>)
-
 Now that our agents have been fully updated, let's return geometry that represents them. After all the agents have either reached their limit of descent or their maximum number of steps we will create a polycurve through the points in their trail list and output the polycurve trails.
 
-![](<../.gitbook/assets/scripting strategies - exercise - 07.jpg>)
-
 Our script for finding the steepest paths.
-
-![](<../.gitbook/assets/scripting strategies - exercise - 08.jpg>)
 
 > 1. A preset that simulates rainfall on the underlying surface.
 > 2. Rather than finding the steepest path, the agents can be toggled to traverse the underlying surface.

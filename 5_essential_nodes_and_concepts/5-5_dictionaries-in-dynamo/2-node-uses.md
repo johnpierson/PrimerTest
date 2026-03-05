@@ -2,8 +2,6 @@
 
 Dynamo 2.0 exposes a variety of Dictionary nodes for our use. This includes _create, action, and query_ nodes.
 
-![](<../../.gitbook/assets/dictionary nodes - nodes.jpg>)
-
 #### Create
 
 1.`Dictionary.ByKeysValues` will create a dictionary with the supplied values and keys. _(The number of entries will be whatever the shortest list input is)_

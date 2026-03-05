@@ -6,8 +6,6 @@ There are two fundamental ways to create free-form curves in Dynamo: specifying 
 
 To create an interpolated curve, simply pass in a collection of Points to the _NurbsCurve.ByPoints_ method.
 
-![](../../.gitbook/assets/Curves_01.png)
-
 ```js
 num_pts = 6;
 
@@ -19,8 +17,6 @@ int_curve = NurbsCurve.ByPoints(pts);
 ```
 
 The generated curve intersects each of the input points, beginning and ending at the first and last point in the collection, respectively. An optional periodic parameter can be used to create a periodic curve which is closed. Dynamo will automatically fill in the missing segment, so a duplicate end point (identical to the start point) isn’t needed.
-
-![](../../.gitbook/assets/Curves_02.png)
 
 ```js
 pts = Point.ByCoordinates(Math.Cos(0..350..#10),
@@ -38,8 +34,6 @@ crv2 = NurbsCurve.ByPoints(pts.Translate(5, 0, 0),
 
 NurbsCurves are generated in much the same way, with input points represent the endpoints of a straight line segment, and a second parameter specifying the amount and type of smoothing the curve undergoes, called the degree.\* A curve with degree 1 has no smoothing; it is a polyline.
 
-![](../../.gitbook/assets/Curves_03.png)
-
 ```js
 num_pts = 6;
 
@@ -52,8 +46,6 @@ ctrl_curve = NurbsCurve.ByControlPoints(pts, 1);
 
 A curve with degree 2 is smoothed such that the curve intersects and is tangent to the midpoint of the polyline segments:
 
-![](../../.gitbook/assets/Curves_04.png)
-
 ```js
 num_pts = 6;
 
@@ -65,8 +57,6 @@ ctrl_curve = NurbsCurve.ByControlPoints(pts, 2);
 ```
 
 Dynamo supports NURBS (Non-uniform rational B-spline) curves up to degree 20, and the following script illustrates the effect increasing levels of smoothing has on the shape of a curve:
-
-![](../../.gitbook/assets/Curves_05.png)
 
 ```js
 num_pts = 6;
@@ -86,8 +76,6 @@ ctrl_crvs = create_curve(pts, 1..11);
 Note that you must have at least one more control point than the degree of the curve.
 
 Another benefit of constructing curves by control vertices is the ability to maintain tangency between individual curve segments. This is done by extracting the direction between the last two control points, and continuing this direction with the first two control points of the following curve. The following example creates two separate NURBS curves which are nevertheless as smooth as one curve:
-
-![](../../.gitbook/assets/Curves_06.png)
 
 ```js
 pts_1 = {};

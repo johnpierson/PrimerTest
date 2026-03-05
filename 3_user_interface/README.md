@@ -4,8 +4,6 @@
 
 The User Interface (UI) for Dynamo is organized into five main regions. We will briefly cover the overview here and further explain the Workspace and Library in the following sections.
 
-![](<../.gitbook/assets/user interface - ui.png>)
-
 > 1. Menus
 > 2. Toolbar
 > 3. Library
@@ -14,15 +12,11 @@ The User Interface (UI) for Dynamo is organized into five main regions. We will 
 
 ### Menus
 
-![](../.gitbook/assets/userinterface-menu\(1\).jpg)
-
 Here are Menus for basic functionality of the Dynamo application. Like most Windows software, the first two menus related to managing files, operations for selection and content editing. The remaining menus are more specific to Dynamo.
 
 #### Dynamo Menus
 
 General info and settings can be found on the **Dynamo** drop down menu.
-
-![](<../.gitbook/assets/user interface - dynamo menu.jpg>)
 
 > 1. About - Find out the Dynamo version installed on your machine.
 > 2. Agreement to Collect Usability Data - This allows you to opt-in or out for sharing your user data to improve Dynamo.
@@ -33,13 +27,11 @@ General info and settings can be found on the **Dynamo** drop down menu.
 
 If you're stuck, check out the **Help** Menu. You may access one of the Dynamo reference websites through your internet browser.
 
-![](../.gitbook/assets/help-menu.png)
-
 > 1. Interactive Guides - Tours that guide you step by step through various Dynamo features.
 > 2. Samples - Reference example files. Only available in host programs including Revit and Civil 3D.
 > 3. Dynamo Dictionary - Resource with documentation on all nodes.
 > 4. Dynamo Website - A website for information about Dynamo and links to resources such as the forum, blog, etc.
-> 5. Dynamo Repository - View the Dynamo Project on GitHub.&#x20;
+> 5. Dynamo Repository - View the Dynamo Project on GitHub.
 > 6. Dynamo Project Wiki - Visit the wiki for learning about development using the Dynamo API, supporting libraries and tools.
 > 7. Display Start Page - Return to the Dynamo start page when within a document.
 > 8. Report A Bug - Open an Issue on GitHub.
@@ -48,33 +40,25 @@ If you're stuck, check out the **Help** Menu. You may access one of the Dynamo r
 
 Dynamo's Toolbar contains a series of buttons for quick access to working with files as well as Undo \[Ctrl + Z] and Redo \[Ctrl + Y] commands. On the far right is another button that will export a snapshot of the workspace, which is extremely useful for documentation and sharing.
 
-* ![](<../.gitbook/assets/user interface - new file.jpg>) New - Create a new .dyn file
-* ![](<../.gitbook/assets/user interface - open (1).png>) Open - Open an existing .dyn (workspace) or .dyf (custom node) file
-* ![](<../.gitbook/assets/user interface - save.png>) Save/Save As - Save your active .dyn or .dyf file
-* ![](<../.gitbook/assets/user interface - undo.jpg>) Undo - Undo your last action
-* ![](<../.gitbook/assets/user interface - redo.jpg>) Redo - Redo the next action
-* ![](<../.gitbook/assets/user interface - screenshot.png>) Export Workspace as Image - Export the visible workspace as a PNG file
+* &#x20;New - Create a new .dyn file
+* &#x20;Open - Open an existing .dyn (workspace) or .dyf (custom node) file
+* &#x20;Save/Save As - Save your active .dyn or .dyf file
+* &#x20;Undo - Undo your last action
+* &#x20;Redo - Redo the next action
+* &#x20;Export Workspace as Image - Export the visible workspace as a PNG file
 
 ### Library
 
 The Dynamo Library is a collection of functional libraries, each Library containing Nodes grouped by Category. It consists basic libraries which are added during default installation of Dynamo, as we continue to introduce its usage, we will demonstrate how to extend the base functionality with Custom Nodes and additional Packages. The [2-library.md](2-library.md "mention") section will cover a more detailed guidance on using it.
 
-![](<../.gitbook/assets/user interface - library (1).gif>)
-
 ### Workspace
 
 The Workspace is where we compose our visual programs, you may also change its Preview setting to view the 3D geometries from here. Refer [1-workspace.md](1-workspace.md "mention") for more details.
-
-![](<../.gitbook/assets/user interface - workspace (1).gif>)
 
 ### Execution Bar
 
 Run your Dynamo script from here. Click the dropdown icon on the Execution button to change between the different modes.
 
-![](<../.gitbook/assets/user interface - execution bar.gif>)
-
 * Automatic: Runs your script automatically. Changes are updated in realtime.
 * Manual: Script only runs when the 'Run' button is clicked. Useful for making changes to a complicated and 'heavy' script.
 * Periodic: This option is grayed out by default. Only available when the _DateTime.Now_ node is used. You can set the graph to run automatically at a specified interval.
-
-![](<../.gitbook/assets/user interface - execution bar DateTime node.jpg>)

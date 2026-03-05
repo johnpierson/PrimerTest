@@ -18,12 +18,7 @@ For users who would like to develop a more in-depth understanding of each elemen
 If you would like to see the demonstration of Dynamo workflows, we have included some graphs in the Sample Workflows section. Follow the attached instructions to create your own Dynamo graphs.
 
 * [Parametric Vase](../10_sample_workflow/10-1_getting-started-workflows/1-parametric-vase.md)
-
-![](../.gitbook/assets/vase1.gif)
-
 * [Attractor points](../10_sample_workflow/10-1_getting-started-workflows/2-attractor-points.md)
-
-![](<../.gitbook/assets/attractor1 (1).gif>)
 
 {% hint style="info" %}
 There are more topic specific exercises can be found in later chapters as we cover different topics about Dynamo. **Exercises** can usually be found in the last section of each page.
@@ -33,14 +28,10 @@ There are more topic specific exercises can be found in later chapters as we cov
 
 Dynamo wouldn't be what it is without a strong group of avid users and active contributors. Engage the community by following the [Blog](http://dynamobim.org/blog/), adding your work to the Gallery, or discussing Dynamo in the [Forum](https://forum.dynamobim.com).
 
-![The Forum](../.gitbook/assets/02-Community.png)
-
 ### The Platform
 
 Dynamo is envisioned as a visual programming tool for designers, allowing us to make tools that make use of external libraries or any Autodesk product that has an API. With Dynamo Sandbox we can develop programs in a "Sandbox" style application - but the Dynamo ecosystem continues to grow.
 
 The source code for the project is open-source, enabling us to extend its functionality to our hearts content. Check out the project on GitHub and browse the Works in Progress of users customizing Dynamo.
-
-![The Repo](../.gitbook/assets/03-TheRepo.png)
 
 > Browse, Fork, and start extending Dynamo for your needs

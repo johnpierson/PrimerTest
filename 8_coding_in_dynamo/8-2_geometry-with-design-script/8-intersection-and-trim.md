@@ -15,8 +15,6 @@ The _Intersect_ method is defined on all pieces of geometry in Dynamo, meaning t
 
 The following very simple example demonstrates the intersection of a plane with a NurbsSurface. The intersection generates a NurbsCurve array, which can be used like any other NurbsCurve.
 
-![](../../.gitbook/assets/IntersectionAndTrim_01.png)
-
 ```js
 // python_points_5 is a set of Points generated with
 // a Python script found in Chapter 12, Section 10
@@ -46,8 +44,6 @@ The _Trim_ method is very similar to the Intersect method, in that it is defined
 | Solid       | -              | -     | Yes   | Yes     | Yes   |
 
 Something to note about _Trim_ methods is the requirement of a “select” point, a point which determines which geometry to discard, and which pieces to keep. Dynamo finds and discards the trimmed geometry closest to the select point.
-
-![](../../.gitbook/assets/IntersectionAndTrim_02.png)
 
 ```js
 // python_points_5 is a set of Points generated with

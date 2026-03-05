@@ -6,8 +6,6 @@ Dynamo Hype Video
 
 ## For Dynamo v2.13 and newer
 
-![Dynamo Logo](.gitbook/assets/dynamo_logo_dark-trim.jpg)
-
 > Dynamo is an open source visual programming platform for designers.
 
 ### Welcome
@@ -19,6 +17,7 @@ The power of Dynamo can be found in a wide variety of design-related activities.
 * **Explore** visual programming for the first time
 * **Connect** workflows in various software
 * **Engage** an active community of users, contributors, and developers
+*
 * **Develop** an open-source platform for continued improvement
 
 In the midst of this activity and exciting opportunity for working with Dynamo, we need a document of the same caliber, the Dynamo Primer.
@@ -29,9 +28,9 @@ We are continuously improving Dynamo, so some features may look different from w
 
 ### Open Source
 
-The Dynamo Primer project is open source! We're dedicated to providing quality content and appreciate any feedback you may have. If you would like to report an issue on anything at all, please post them on our GitHub issue page: [https://github.com/DynamoDS/DynamoPrimerNew/issues](https://github.com/DynamoDS/DynamoPrimerNew/issues)&#x20;
+The Dynamo Primer project is open source! We're dedicated to providing quality content and appreciate any feedback you may have. If you would like to report an issue on anything at all, please post them on our GitHub issue page: [https://github.com/DynamoDS/DynamoPrimerNew/issues](https://github.com/DynamoDS/DynamoPrimerNew/issues)
 
-If you would like to contribute a new section, edits, or anything else to this project, check out the GitHub repo to get started: [https://github.com/DynamoDS/DynamoPrimerNew](https://github.com/DynamoDS/DynamoPrimerNew)&#x20;
+If you would like to contribute a new section, edits, or anything else to this project, check out the GitHub repo to get started: [https://github.com/DynamoDS/DynamoPrimerNew](https://github.com/DynamoDS/DynamoPrimerNew)
 
 ### The Dynamo Primer Project
 
@@ -39,31 +38,21 @@ The Dynamo Primer is an open-source project, initiated by Matt Jezyk and the Dyn
 
 **Mode Lab** was commissioned to write the First Edition of the Primer. We thank them for all of their efforts in establishing this valuable resource.
 
-![](.gitbook/assets/MODELAB_Logo.png)
-
 ***
 
 **John Pierson of Parallax Team** was commissioned to update the Primer to reflect the Dynamo 2.0. revisions.
-
-![](.gitbook/assets/PRLX_Logo.jpg)
 
 ***
 
 **Matterlab** was commissioned to update the Primer to reflect the Dynamo 2.13. revisions.
 
-![](<.gitbook/assets/matterlab_final-07 (2).jpg>)
-
 ***
 
 **Archilizer** was commissioned to update the primer to reflect the Dynamo 2.17. revisions.
 
-<figure><img src=".gitbook/assets/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
-
 ***
 
 **Wood Rodgers** was commissioned to update the Primer with content for Dynamo for Civil 3D.
-
-<figure><img src=".gitbook/assets/WR_Logo_NoTagLine_Color (1).jpg" alt=""><figcaption></figcaption></figure>
 
 ### Acknowledgments
 

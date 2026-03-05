@@ -2,15 +2,11 @@
 
 With an understanding of how to create a Zero-Touch project, we can go deeper into the specifics of creating a node by walking through the ZeroTouchEssentials example on the Dynamo GitHub.
 
-![Zero-touch nodes](../../.gitbook/assets/ootbzerotouch.png)
-
 > Many of Dynamo's standard nodes are essentially Zero-Touch nodes, like most of the Math, Color, and DateTime nodes above.
 
 To start, download the ZeroTouchEssentials project from here: [https://github.com/DynamoDS/ZeroTouchEssentials](https://github.com/DynamoDS/ZeroTouchEssentials)
 
 In Visual Studio, open the `ZeroTouchEssentials.sln` solution file and build the solution.
-
-![ZeroTouchEssentials in Visual Studio](../../.gitbook/assets/vs-build-zte.jpg)
 
 > The `ZeroTouchEssentials.cs` file contains all the methods we will be importing into Dynamo.
 
@@ -37,8 +33,6 @@ namespace ZeroTouchEssentials
     }
 }
 ```
-
-![Default value](../../.gitbook/assets/defaultval.jpg)
 
 > 1. The default value will show up when hovering over the node input port
 
@@ -76,8 +70,6 @@ namespace ZeroTouchEssentials
 
 A node that returns multiple outputs.
 
-![Multiple outputs](../../.gitbook/assets/multipleoutputs.png)
-
 > 1. Notice that there are now two output ports named according to the strings we entered for the dictionary's keys.
 
 ### Documentation, Tooltips, and Search <a href="#documentation-tooltips-and-search" id="documentation-tooltips-and-search"></a>
@@ -89,8 +81,6 @@ It is best practice to add documentation to Dynamo nodes that describe the node'
 * After the three slashes, create XML tags above methods that Dynamo will read when importing the .dll
   * For example: `/// <summary>...</summary>`
 * Enable XML documentation in Visual Studio by selecting `Project > [Project] Properties > Build > Output` and checking `Documentation file`
-
-![Generating an XML file](../../.gitbook/assets/vs-xml.jpg)
 
 > 1. Visual Studio will generate an XML file at the specified location
 
@@ -140,8 +130,6 @@ Node descriptions briefly describe a node’s function and output. In Dynamo, th
 
 * In the node tooltip
 * In the documentation browser
-
-![Node Description](../../.gitbook/assets/node-description.png)
 
 Follow these guidelines to ensure consistency and help save time when writing or updating node descriptions.
 
@@ -210,8 +198,6 @@ namespace ZeroTouchEssentials
 
 After the ZeroTouchEssentials dll has been imported there will be a ZeroTouchEssentials node in the library. This object can be created by using the `ByTwoDoubles` node.
 
-![ByTwoDoubles node](../../.gitbook/assets/dyn-constructor.jpg)
-
 ### Using Dynamo Geometry Types <a href="#using-dynamo-geometry-types" id="using-dynamo-geometry-types"></a>
 
 Dynamo libraries can use native Dynamo geometry types as inputs and create new geometry as outputs. Geometry types are created in the following way:
@@ -241,8 +227,6 @@ namespace ZeroTouchEssentials
 > Refer to this code example in [ZeroTouchEssentials.cs](https://github.com/DynamoDS/ZeroTouchEssentials/blob/9917fd8159afc9e7bdb2944c960155a496e0b2dc/ZeroTouchEssentials/ZeroTouchEssentials.cs#L86)
 
 A node that gets a curve's length and doubles it.
-
-![Curve input](../../.gitbook/assets/doublelength.png)
 
 > 1. This node accepts a Curve geometry type as an input.
 
@@ -284,8 +268,6 @@ When publishing a newer version of a library, node names may change. Name change
 * In the `.xml`, create a single `<migrations>...</migrations>` element
 * Inside the migrations element, create `<priorNameHint>...</priorNameHint>` elements for each name change
 * For each name change, provide an `<oldName>...</oldName>` and `<newName>...</newName>` element
-
-![Migrations file](../../.gitbook/assets/vs-migrations-file.jpg)
 
 > 1. Right-click and select `Add > New Item`
 > 2. Choose `XML File`
