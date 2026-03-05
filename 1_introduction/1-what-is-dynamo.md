@@ -8,7 +8,7 @@ Learn more about the [difference between **Dynamo Core**/**Revit**/**Sandbox**.]
 
 ### The Process
 
-Dynamo enables us to work within a Visual Programming process wherein we connect elements together to define the relationships and the sequences of actions that compose custom algorithms. We can use our algorithms for a wide array of applications, from processing data to generating geometry, all in real-time and without writing a lick of `code`.
+Dynamo enables us to work within a Visual Programming process wherein we connect elements together to defi ne the relationships and the sequences of actions that compose custom algorithms. We can use our algorithms for a wide array of applications, from processing data to generating geometry, all in real-time and without writing a lick of `code`.
 
 ### Connecting Nodes and Wires
 
